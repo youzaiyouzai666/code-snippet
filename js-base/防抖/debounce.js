@@ -59,6 +59,7 @@ function debounce3(fun, wait) {
  * 立即执行
  * @param {} fun 
  * @param {*} wait 
+ * @param {boolean} immediate 是否立即执行
  */
 function debounce4(fun, wait, immediate) {
     let timeout;
