@@ -74,6 +74,7 @@ function unique_ObjectKey(arrays){
     }
     return arrays.filter(function(item,index, array){
         const _key = _setKey(item);
+        debugger;
         return obj.hasOwnProperty(_key) ? false : (obj[_key]= true) //TODO 为什么 “(obj[item]= true) ”返回true
     })
 }
@@ -82,10 +83,13 @@ function unique_ObjectKey(arrays){
 function unique_es6(array){
     return Array.from(new Set(array));
 }
+function unique_es6_2(array){
+    return [...new Set(array)];
+}
 
 /**************************************test**************************************************** */
 function test(){
     const array = [0,1,1,3,4,1,9,'1'];
-    console.log(array, unique_es6(array));
+    console.log(array, unique_ObjectKey(array));
  }
  test();
