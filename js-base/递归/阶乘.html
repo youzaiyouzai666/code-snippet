@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="IE=edge, chrome=1">
+    <title>阶乘</title>
+</head>
+</head>
+
+<body>
+
+   <script >
+       function factorial(n){
+           if(n===1) {
+               return 1
+            };
+           return n*factorial(n-1);
+       }
+
+       function factorial_wei(n,res){
+           if(!res){
+               res = 1;
+           }
+           if(n === 1){
+            return 1*res;
+           } 
+           return factorial_wei(n-1, n*res);
+       }
+       /*************************test***********************************************/
+       console.log(factorial_wei(3));
+    </script>
+</body>
+
+</html>

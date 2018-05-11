@@ -5,8 +5,8 @@
         Constructor = args.shift();
 
         obj.__proto__ = Constructor.prototype;
-        Constructor.apply(obj,args);
-        return obj;
+        const ret = Constructor.apply(obj,args);
+        return typeof ret === 'object' ? ret :obj;
     }
 
     /******************************test*********************************************************** */
